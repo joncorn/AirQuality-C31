@@ -13,6 +13,9 @@
 		6DAAF95623E1DEF00072D03C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DAAF95523E1DEF00072D03C /* Assets.xcassets */; };
 		6DAAF95923E1DEF00072D03C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DAAF95723E1DEF00072D03C /* LaunchScreen.storyboard */; };
 		6DAAF95C23E1DEF00072D03C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DAAF95B23E1DEF00072D03C /* main.m */; };
+		6DAAF96A23E1DFFD0072D03C /* JDCCityAirQuality.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DAAF96923E1DFFD0072D03C /* JDCCityAirQuality.m */; };
+		6DAAF96D23E1E28E0072D03C /* JDCWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DAAF96C23E1E28E0072D03C /* JDCWeather.m */; };
+		6DAAF97023E1E5560072D03C /* JDCPollution.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DAAF96F23E1E5560072D03C /* JDCPollution.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		6DAAF95823E1DEF00072D03C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6DAAF95A23E1DEF00072D03C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DAAF95B23E1DEF00072D03C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6DAAF96823E1DFFD0072D03C /* JDCCityAirQuality.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JDCCityAirQuality.h; sourceTree = "<group>"; };
+		6DAAF96923E1DFFD0072D03C /* JDCCityAirQuality.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JDCCityAirQuality.m; sourceTree = "<group>"; };
+		6DAAF96B23E1E28E0072D03C /* JDCWeather.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JDCWeather.h; sourceTree = "<group>"; };
+		6DAAF96C23E1E28E0072D03C /* JDCWeather.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JDCWeather.m; sourceTree = "<group>"; };
+		6DAAF96E23E1E5560072D03C /* JDCPollution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JDCPollution.h; sourceTree = "<group>"; };
+		6DAAF96F23E1E5560072D03C /* JDCPollution.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JDCPollution.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +110,12 @@
 		6DAAF96523E1DF180072D03C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6DAAF96823E1DFFD0072D03C /* JDCCityAirQuality.h */,
+				6DAAF96923E1DFFD0072D03C /* JDCCityAirQuality.m */,
+				6DAAF96B23E1E28E0072D03C /* JDCWeather.h */,
+				6DAAF96C23E1E28E0072D03C /* JDCWeather.m */,
+				6DAAF96E23E1E5560072D03C /* JDCPollution.h */,
+				6DAAF96F23E1E5560072D03C /* JDCPollution.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -145,6 +160,7 @@
 		6DAAF93E23E1DEEC0072D03C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JDC;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Jon Corn";
 				TargetAttributes = {
@@ -190,8 +206,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DAAF94B23E1DEED0072D03C /* AppDelegate.m in Sources */,
+				6DAAF96A23E1DFFD0072D03C /* JDCCityAirQuality.m in Sources */,
+				6DAAF97023E1E5560072D03C /* JDCPollution.m in Sources */,
 				6DAAF95C23E1DEF00072D03C /* main.m in Sources */,
 				6DAAF94E23E1DEED0072D03C /* SceneDelegate.m in Sources */,
+				6DAAF96D23E1E28E0072D03C /* JDCWeather.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
