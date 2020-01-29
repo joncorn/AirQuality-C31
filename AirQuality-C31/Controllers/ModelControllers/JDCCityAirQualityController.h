@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)fetchSupportedCountries:(void (^) (NSArray<NSString *> *_Nullable))completion;
 
-+ (void)fetchSupportedCountry:(NSString *)state
++ (void)fetchSupportedStatesInCountry:(NSString *)country
                    completion:(void (^) (NSArray<NSString *> *_Nullable))completion;
 
 + (void)fetchSupportedCitiesInState:(NSString *)state
@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)fetchDataForCity:(NSString *)city
                    state:(NSString *)state
                  country:(NSString *)country
-              completion:(void (^) (NSArray<NSString *> *_Nullable))completion;
+              completion:(void (^) (JDCCityAirQuality *_Nullable))completion;
 
 @end
 
