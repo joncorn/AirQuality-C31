@@ -13,7 +13,7 @@
 // Model initializer
 - (instancetype)initWithInt:(NSInteger)aqi
 {
-    self = [self init];
+    self = [super init];
     if (self)
     {
         _airQualityIndex = aqi;
@@ -27,7 +27,8 @@
 
 - (instancetype)initWithDictionary:(NSDictionary<NSString *,id> *)dictionary
 {
-    
+    NSInteger aqi = [dictionary[@"aqius"] intValue];
+    return [self initWithInt:aqi];
 }
 
 @end
