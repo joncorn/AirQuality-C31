@@ -14,7 +14,6 @@
 //░░█░░▄▀░░█░░░░▀██▀░░░░▀▀░▀▀░░▄▀
 //░█░░░█░░█░░░░░░▄▄░░░░░░░░░░░▄▀
 
-
 #import "JDCCityAirQualityController.h"
 #import "JDCCityAirQuality.h"
 #import "JDCWeather.h"
@@ -165,6 +164,5 @@ static NSString *const apiKey = @"5f3cd124-bdc5-4762-bb71-b81df5566cec";
                }
     }] resume];
 }
-
 
 @end
