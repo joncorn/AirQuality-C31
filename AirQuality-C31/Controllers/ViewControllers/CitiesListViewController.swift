@@ -51,6 +51,12 @@ class CitiesListViewController: UIViewController, UITableViewDelegate, UITableVi
     
     // MARK: - navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "
+        if segue.identifier == "toCityDetail" {
+            guard let indexPath = tableView.indexPathForSelectedRow,
+                let destinationVC = segue.destination as? CityViewController else { return }
+            destinationVC.countryLanding = countryLanding
+            destinationVC.stateLanding = statesLanding
+            destinationVC.cityLanding = cities?[indexPath.row]
+        }
     }
 }
