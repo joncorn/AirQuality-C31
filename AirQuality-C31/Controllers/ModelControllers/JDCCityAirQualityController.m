@@ -107,6 +107,7 @@ static NSString *const apiKey = @"5f3cd124-bdc5-4762-bb71-b81df5566cec";
     NSURL *baseURL = [[NSURL alloc] initWithString:baseURLString];
     NSURL *versionURL = [baseURL URLByAppendingPathComponent:versionComponent];
     NSURL *cityURL = [versionURL URLByAppendingPathComponent:cityComponent];
+    // Build components
     NSURLComponents *components = [NSURLComponents componentsWithURL:cityURL resolvingAgainstBaseURL:true];
     NSURLQueryItem *countryQuery = [[NSURLQueryItem alloc] initWithName:@"country" value:country];
     NSURLQueryItem *stateQuery = [[NSURLQueryItem alloc] initWithName:@"state" value:state];
