@@ -152,12 +152,13 @@ static NSString *const apiKey = @"5f3cd124-bdc5-4762-bb71-b81df5566cec";
     NSURL *finalURL = components.URL;
     // Data task
     [[[NSURLSession sharedSession] dataTaskWithURL:finalURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        // handle error
         if (error)
                {
                    NSLog(@"Error: %@", error);
                    return completion([JDCCityAirQuality new]);
                }
-               
+               // handle data
                if (!data)
                {
                    NSLog(@"No Data");
