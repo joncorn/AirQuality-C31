@@ -50,7 +50,7 @@ extension CountriesListViewController: UITableViewDelegate, UITableViewDataSourc
         if segue.identifier == "toStatesVC" {
             guard let indexPath = tableView.indexPathForSelectedRow,
                 let destinationVC = segue.destination as? StatesListViewController else { return }
-            destinationVC.countryLanding = countries?[indexPath.row]
+            destinationVC.country = countries?[indexPath.row]
         }
     }
 }

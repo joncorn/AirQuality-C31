@@ -11,12 +11,12 @@ import UIKit
 class StatesListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     // MARK: - Properties
-    var countryLanding: String?
+    var country: String?
     var states: [String]? {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
-                self.title = self.countryLanding
+                self.title = self.country
             }
         }
     }
@@ -29,7 +29,7 @@ class StatesListViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        guard let country = countryLanding else { return }
+        guard let country = country else { return }
         JDCCityAirQualityController.fetchSupportedStates(inCountry: country) { (states) in
             self.states = states
         }
@@ -52,11 +52,11 @@ class StatesListViewController: UIViewController, UITableViewDelegate, UITableVi
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toCitiesDetail" {
+        if segue.identifier == "toCitiesVC" {
             guard let indexPath = tableView.indexPathForSelectedRow,
                 let destinationVC = segue.destination as? CitiesListViewController else { return }
-            destinationVC.countryLanding = countryLanding
-            destinationVC.statesLanding = states?[indexPath.row]
+            destinationVC.country = country
+            destinationVC.state = states?[indexPath.row]
         }
     }
 }

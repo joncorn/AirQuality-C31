@@ -29,17 +29,17 @@ class CityViewController: UIViewController {
         super.viewDidLoad()
         guard let country = countryLanding, let state = stateLanding, let city = cityLanding else { return }
         JDCCityAirQualityController.fetchData(forCity: city, state: state, country: country) { (airQuality) in
-            self.updateViews(airQuality: airQuality!)
+            self.updateViews(airQuality: airQuality)
         }
     }
     
     func updateViews(airQuality: JDCCityAirQuality) {
         DispatchQueue.main.async {
-            self.cityNameLabel.text = airQuality.city
+            self.cityNameLabel.text = "City: \(airQuality.city)"
             self.AQILabel.text =
                 "Air Quality Index: \(airQuality.pollution.airQualityIndex)"
-            self.countryLabel.text = airQuality.country
-            self.stateLabel.text = airQuality.state
+            self.countryLabel.text = "Country: \(airQuality.country)"
+            self.stateLabel.text = "State: \(airQuality.state)"
             self.temperatureLabel.text = "Temperature: \(airQuality.weather.temperature)"
             self.humidityLabel.text = "Humidity: \(airQuality.weather.humidity)"
             self.windSpeedLabel.text = "Windspeed: \(airQuality.weather.windSpeed)"

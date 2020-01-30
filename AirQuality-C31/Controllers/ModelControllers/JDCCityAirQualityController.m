@@ -135,6 +135,7 @@ static NSString *const apiKey = @"5f3cd124-bdc5-4762-bb71-b81df5566cec";
         {
             [cityArray addObject:city[@"city"]];
         }
+        return completion(cityArray);
     }] resume];
 }
 
@@ -165,6 +166,13 @@ static NSString *const apiKey = @"5f3cd124-bdc5-4762-bb71-b81df5566cec";
                    NSLog(@"No Data");
                    return completion([JDCCityAirQuality new]);
                }
+        
+        NSDictionary *topLevelDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+                NSDictionary *dataDictionary = topLevelDictionary[@"data"];
+                
+        JDCCityAirQuality *airQuality = [[JDCCityAirQuality alloc] initWithDictionary:dataDictionary];
+        return completion(airQuality);
+        
     }] resume];
 }
 

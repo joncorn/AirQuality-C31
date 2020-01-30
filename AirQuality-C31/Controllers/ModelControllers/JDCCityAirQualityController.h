@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)fetchDataForCity:(NSString *)city
                    state:(NSString *)state
                  country:(NSString *)country
-              completion:(void (^) (JDCCityAirQuality *_Nullable))completion;
+              completion:(void (^) (JDCCityAirQuality *))completion;
 
 @end
 
