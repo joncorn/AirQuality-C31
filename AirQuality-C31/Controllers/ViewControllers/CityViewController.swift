@@ -16,8 +16,13 @@ class CityViewController: UIViewController {
     var cityLanding: String?
     
     // MARK: - Outlets
-    
-    
+    @IBOutlet weak var cityNameLabel: UILabel!
+    @IBOutlet weak var AQILabel: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var stateLabel: UILabel!
+    @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var humidityLabel: UILabel!
+    @IBOutlet weak var windSpeedLabel: UILabel!
     
     // MARK: - View Lifecycle
     override func viewDidLoad() {

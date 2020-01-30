@@ -229,6 +229,15 @@
                         <viewLayoutGuide key="safeArea" id="hUq-Ig-juW"/>
                     </view>
                     <navigationItem key="navigationItem" id="kLP-x5-S0w"/>
+                    <connections>
+                        <outlet property="AQILabel" destination="pCj-Ng-HZu" id="Je4-hv-m8X"/>
+                        <outlet property="cityNameLabel" destination="Lpz-jl-T9K" id="h3k-E2-ZIL"/>
+                        <outlet property="countryLabel" destination="PBk-yL-4PV" id="qxw-gM-hz9"/>
+                        <outlet property="humidityLabel" destination="wDR-X9-1Kk" id="eNR-bS-SIh"/>
+                        <outlet property="stateLabel" destination="HbU-Ir-rbG" id="8bL-6I-VhJ"/>
+                        <outlet property="temperatureLabel" destination="iW8-iL-i3v" id="aHj-Oq-thR"/>
+                        <outlet property="windSpeedLabel" destination="LrR-uZ-7QS" id="5b9-PY-Oyj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ei4-Ez-W3Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
